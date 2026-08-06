@@ -6,8 +6,6 @@ modelsim/work/
 *.mti
 transcript
 
-# Backup files
-*.bak
 
 # Temporary files
 _temp/

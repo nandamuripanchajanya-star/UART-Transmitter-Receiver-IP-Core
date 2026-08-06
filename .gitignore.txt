@@ -1,0 +1,17 @@
+# ModelSim
+work/
+modelsim/work/
+*.wlf
+*.mpf
+*.mti
+transcript
+
+# Backup files
+*.bak
+
+# Temporary files
+_temp/
+
+# Windows
+Thumbs.db
+Desktop.ini

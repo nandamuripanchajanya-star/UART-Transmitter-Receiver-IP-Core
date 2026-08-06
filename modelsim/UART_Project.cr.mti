@@ -1,1 +1,21 @@
+C:/Users/nanda/OneDrive/Documents/GitHub/UART-Transmitter-Receiver-IP-Core/rtl/uart_tb.v {1 {vlog -work work -nocovercells C:/Users/nanda/OneDrive/Documents/GitHub/UART-Transmitter-Receiver-IP-Core/rtl/uart_tb.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module uart_tb
 
+Top level modules:
+	uart_tb
+
+} {} {}} C:/Users/nanda/OneDrive/Documents/GitHub/UART-Transmitter-Receiver-IP-Core/rtl/uart_rx.v {1 {vlog -work work -nocovercells C:/Users/nanda/OneDrive/Documents/GitHub/UART-Transmitter-Receiver-IP-Core/rtl/uart_rx.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+
+} {} {}} C:/Users/nanda/OneDrive/Documents/GitHub/UART-Transmitter-Receiver-IP-Core/rtl/uart_top.v {1 {vlog -work work -nocovercells C:/Users/nanda/OneDrive/Documents/GitHub/UART-Transmitter-Receiver-IP-Core/rtl/uart_top.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+
+} {} {}} C:/Users/nanda/OneDrive/Documents/GitHub/UART-Transmitter-Receiver-IP-Core/rtl/baud_generator.v {1 {vlog -work work -nocovercells C:/Users/nanda/OneDrive/Documents/GitHub/UART-Transmitter-Receiver-IP-Core/rtl/baud_generator.v
+Model Technology ModelSim ALTERA vlog 6.3g_p1 Compiler 2008.08 Aug 13 2008
+-- Compiling module baud_generator
+
+Top level modules:
+	baud_generator
+
+} {} {}}

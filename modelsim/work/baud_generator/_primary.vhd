@@ -2,7 +2,7 @@ library verilog;
 use verilog.vl_types.all;
 entity baud_generator is
     generic(
-        BAUD_DIV        : integer := 5208
+        BAUD_DIV        : integer := 16
     );
     port(
         clk             : in     vl_logic;

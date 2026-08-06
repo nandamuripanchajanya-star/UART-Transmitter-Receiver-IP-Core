@@ -8,7 +8,7 @@ module baud_generator (
 );
 
     // 50 MHz Clock and 9600 Baud Rate
-    parameter BAUD_DIV = 5208;
+    parameter BAUD_DIV = 16;
 
     // Counter to divide the clock
     reg [12:0] counter;

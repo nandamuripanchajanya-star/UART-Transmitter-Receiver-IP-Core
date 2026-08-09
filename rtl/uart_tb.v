@@ -76,34 +76,131 @@ module uart_tb;
 
 
     // Test Stimulus
-    initial
-    begin
-        #150;
+	initial
+	begin
 
-        data_in = 8'h55;
-        tx_start = 1'b1;
+		// Wait for reset to finish
+		#150;
 
-        #20;
+		// =========================
+		// Test 1
+		// =========================
+		data_in = 8'h55;
 
-        tx_start = 1'b0;
+		@(posedge clk);
+		tx_start = 1'b1;
 
-        // Wait for complete transmission
-        #5000;
+		@(posedge clk);
+		tx_start = 1'b0;
 
-        if (data_out == 8'h55)
-        begin
-            $display("UART TEST PASSED");
-            $display("Transmitted Data = %h", data_in);
-            $display("Received Data    = %h", data_out);
-        end
-        else
-        begin
-            $display("UART TEST FAILED");
-            $display("Transmitted Data = %h", data_in);
-            $display("Received Data    = %h", data_out);
-        end
+		wait (rx_done == 1'b1);
 
-        $stop;
-    end
+		#100;
+
+		if (data_out == data_in)
+			$display("TEST 1 PASSED: TX = %h, RX = %h", data_in, data_out);
+		else
+			$display("TEST 1 FAILED: TX = %h, RX = %h", data_in, data_out);
+
+
+		// =========================
+		// Test 2
+		// =========================
+		#100;
+
+		data_in = 8'hA5;
+
+		@(posedge clk);
+		tx_start = 1'b1;
+
+		@(posedge clk);
+		tx_start = 1'b0;
+
+		wait (rx_done == 1'b1);
+
+		#100;
+
+		if (data_out == data_in)
+			$display("TEST 2 PASSED: TX = %h, RX = %h", data_in, data_out);
+		else
+			$display("TEST 2 FAILED: TX = %h, RX = %h", data_in, data_out);
+
+
+		// =========================
+		// Test 3
+		// =========================
+		#100;
+
+		data_in = 8'h00;
+
+		@(posedge clk);
+		tx_start = 1'b1;
+
+		@(posedge clk);
+		tx_start = 1'b0;
+
+		wait (rx_done == 1'b1);
+
+		#100;
+
+		if (data_out == data_in)
+			$display("TEST 3 PASSED: TX = %h, RX = %h", data_in, data_out);
+		else
+			$display("TEST 3 FAILED: TX = %h, RX = %h", data_in, data_out);
+
+
+		// =========================
+		// Test 4
+		// =========================
+		#100;
+
+		data_in = 8'hFF;
+
+		@(posedge clk);
+		tx_start = 1'b1;
+
+		@(posedge clk);
+		tx_start = 1'b0;
+
+		wait (rx_done == 1'b1);
+
+		#100;
+
+		if (data_out == data_in)
+			$display("TEST 4 PASSED: TX = %h, RX = %h", data_in, data_out);
+		else
+			$display("TEST 4 FAILED: TX = %h, RX = %h", data_in, data_out);
+
+
+		// =========================
+		// Test 5
+		// =========================
+		#100;
+
+		data_in = 8'h3C;
+
+		@(posedge clk);
+		tx_start = 1'b1;
+
+		@(posedge clk);
+		tx_start = 1'b0;
+
+		wait (rx_done == 1'b1);
+
+		#100;
+
+		if (data_out == data_in)
+			$display("TEST 5 PASSED: TX = %h, RX = %h", data_in, data_out);
+		else
+			$display("TEST 5 FAILED: TX = %h, RX = %h", data_in, data_out);
+
+
+		$display("--------------------------------");
+		$display("UART MULTI-BYTE TEST COMPLETE");
+		$display("--------------------------------");
+
+		$stop;
+
+	end
 
 endmodule

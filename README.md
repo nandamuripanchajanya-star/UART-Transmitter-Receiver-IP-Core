@@ -26,7 +26,6 @@ rtl/
 └── uart_top_tb.v
 
 docs/
-screenshots/
 README.md
 .gitignore
 
@@ -125,6 +124,21 @@ data_out
 
 The transmitted data is compared with the received data for each test case.
 
+## Simulation Waveform
+
+The following waveform shows the UART top-level loopback simulation in ModelSim.
+
+![UART Top Waveform](screenshots/02_uart_top_waveform.png)
+
+## Simulation Test Results
+
+All five test cases passed successfully.
+
+![ModelSim Test Results](screenshots/01_modelsim_tests.png)
+
+## Waveform Detail
+
+![UART Waveform Detail](screenshots/03_waveform_detail.png)
 ## Author
 
 Panchajanya Nandamuri

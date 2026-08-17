@@ -11,27 +11,39 @@ A UART (Universal Asynchronous Receiver/Transmitter) IP Core implemented in Veri
 - TX busy and done status signals
 - RX busy and done status signals
 - Loopback communication for verification
-- RTL simulation using ModelSim
+- Automated ModelSim simulation using a TCL .do script for compilation simulation, waveform setup, and test execution.
 - Multi-byte testbench verification
 
 ## Project Structure
 
-```text
-rtl/
-├── baud_generator.v
-├── uart_tx.v
-├── uart_rx.v
-├── uart_top.v
-├── uart_tb.v
-└── uart_top_tb.v
+UART-Transmitter-Receiver-IP-Core/
+│
+├── rtl/
+│   ├── baud_generator.v
+│   ├── uart_tx.v
+│   ├── uart_rx.v
+│   ├── uart_top.v
+│   ├── uart_tb.v
+│   └── uart_top_tb.v
+│
+├── sim/
+│   └── uart.do
+│
+├── screenshots/
+│   ├── 01_modelsim_tests.png
+│   ├── 02_uart_top_waveform.png
+│   └── 03_modelsim_waveform_detail.png
+│
+├── docs/
+│   └── .gitkeep
+│
+├── .gitignore
+└── README.md
 
-docs/
-README.md
-.gitignore
 
 ## Block Diagram
 
-```text
+
                  +------------------+
                  |  Baud Generator  |
                  +--------+---------+
@@ -85,7 +97,7 @@ The complete UART design was verified using ModelSim with a multi-byte testbench
 
 ### ModelSim Result
 
-```text
+
 TOP TEST 1 PASSED: TX = 55, RX = 55
 TOP TEST 2 PASSED: TX = a5, RX = a5
 TOP TEST 3 PASSED: TX = 00, RX = 00
@@ -107,7 +119,7 @@ UART TOP MODULE TEST COMPLETE
 
 The transmitter output is connected directly to the receiver input in a loopback configuration.
 
-```text
+
 data_in
    |
    v
@@ -120,7 +132,7 @@ UART Receiver
    v
 data_out
 
-```
+
 
 The transmitted data is compared with the received data for each test case.
 

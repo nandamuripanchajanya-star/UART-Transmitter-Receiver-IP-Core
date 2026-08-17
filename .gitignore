@@ -1,14 +1,18 @@
-# ModelSim
+# ModelSim generated files
 work/
 modelsim/work/
 *.wlf
 *.mpf
 *.mti
 transcript
+vsim.wlf
 
+# ModelSim project files
+*.bak
 
 # Temporary files
 _temp/
+*_temp/
 
 # Windows
 Thumbs.db

@@ -24,9 +24,7 @@ UART-Transmitter-Receiver-IP-Core/
 │   ├── uart_rx.v
 │   ├── uart_top.v
 │   ├── uart_tb.v
-│   └── uart_top_tb.v
-│
-├── sim/
+│   ├── uart_top_tb.v
 │   └── uart.do
 │
 ├── screenshots/

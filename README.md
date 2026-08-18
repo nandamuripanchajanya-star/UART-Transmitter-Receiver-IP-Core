@@ -15,9 +15,9 @@ A UART (Universal Asynchronous Receiver/Transmitter) IP Core implemented in Veri
 - Multi-byte testbench verification
 
 ## Project Structure
-
+```text
 UART-Transmitter-Receiver-IP-Core/
-│
+│ 
 ├── rtl/
 │   ├── baud_generator.v
 │   ├── uart_tx.v
@@ -40,7 +40,7 @@ UART-Transmitter-Receiver-IP-Core/
 
 
 ## Block Diagram
-
+```text
 
                  +------------------+
                  |  Baud Generator  |

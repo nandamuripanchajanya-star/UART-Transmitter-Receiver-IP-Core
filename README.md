@@ -37,7 +37,7 @@ UART-Transmitter-Receiver-IP-Core/
 │
 ├── .gitignore
 └── README.md
-
+```
 
 ## Block Diagram
 ```text
@@ -60,7 +60,7 @@ UART-Transmitter-Receiver-IP-Core/
          |                                ^
          |                                |
          +---------- UART TX -------------+
-
+```
 
 
 ## Modules
